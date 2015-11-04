@@ -25,3 +25,9 @@ proguard/
 
 # Log Files
 *.log
+
+# android studio
+.idea/
+output/
+GreatSnow.iml
+
