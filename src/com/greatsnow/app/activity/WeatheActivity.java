@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.greatsnow.app.R;
+import com.greatsnow.app.service.AutoUpdateService;
 import com.greatsnow.app.util.HttpCallbackListener;
 import com.greatsnow.app.util.HttpUtil;
 import com.greatsnow.app.util.Utility;
@@ -205,5 +206,8 @@ public class WeatheActivity extends Activity implements View.OnClickListener {
         currentDateText.setText(prefs.getString("current_date", ""));
         weatherInfoLayout.setVisibility(View.VISIBLE);
         cityNameText.setVisibility(View.VISIBLE);
+
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }

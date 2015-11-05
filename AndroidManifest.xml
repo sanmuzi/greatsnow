@@ -22,6 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.greatsnow.app.activity.WeatheActivity" />
+        <service android:name="com.greatsnow.app.service.AutoUpdateService"/>
+        <receiver android:name="com.greatsnow.app.receiver.AutoUpdateReceiver"/>
     </application>
 
 </manifest>
